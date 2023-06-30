@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+// Utility Classes
+.flex {
+	flex-direction: column;
+}
+
+.mainheader {
+	.showcase {
+		padding-bottom: 10px;
+		img {
+				max-width: 100%;
+			}
+	}
+} //End .mainheader
+
+// Features
+.features {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+} //End #features
+
+// CTA
+#cta {
+	padding: 50px 0;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	.cta-text {
+		margin-top: 40px;
+	}
+} //End #cta
+}

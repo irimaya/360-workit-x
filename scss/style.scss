@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+$main-color: #1B1935;
+$secondary-color: #9157C5;
+$gray-color: #f9f9f9;
+$font-stack: 'Montserrat', sans-serif;
+$font-header: 'DM Serif Display', sans-serif;
+
+// Reset
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// Main Styling
+html,
+body {
+	font-family: $font-stack;
+	color: $main-color;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.2rem;
+}
+
+h1,
+h2,
+h4 {
+	font-family: $font-header;
+	font-weight: 500;
+}
+
+p {
+	font-size: 1rem;
+	margin: 5px 0;
+	line-height: 1.7em;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+// Utility Classes
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.txt-small {
+	font-size: 12px;
+}
+
+.display-1 {
+	font-size: 4rem;
+}
+.display-2 {
+	font-size: 2.5rem;
+}
+
+.btn {
+	display: inline-block;
+	font-size: 15px;
+	padding: 15px 25px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border: none;
+	background: $secondary-color;
+	color: $main-color;
+}
+
+.logo {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.logo span {
+	font-weight: 300;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-fixed {
+	display: flex;
+}
+
+.flex-box {
+	flex: 1;
+}
+
+.mainheader {
+	background: $gray-color;
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100vh;
+		height: 80vh;
+		top: 0;
+		background: $main-color;
+		border-radius: 50%;
+		transform-origin: bottom;
+		transform: translateX(-50%) scale(4);
+	}
+	&-content {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		.navbar {
+			padding: 30px 0;
+			a {
+				color: #fff;
+			}
+			.flex-fixed {
+				justify-content: space-between;
+			}
+			.txt-link {
+				margin-top: 7px;
+				border-bottom: 2px solid $secondary-color;
+			}
+		} //End .navbar
+		.showcase {
+			padding-top: 80px;
+			padding-bottom: 50px;
+			text-align: center;
+			color: #fff;
+			span {
+				border-bottom: 3px solid $secondary-color;
+			}
+			h1 {
+				margin-bottom: 20px;
+			}
+			img {
+				margin-top: 60px;
+			}
+		}
+	} //End .mainheader-content
+} //End .mainheader
+
+// Features
+.features {
+	padding-top: 40px;
+	padding-bottom: 90px;
+	background: $gray-color;
+	// background: red;
+	border-bottom-left-radius: 50% 35%;
+	border-bottom-right-radius: 50% 35%;
+	.flex-box {
+		margin: 20px;
+		text-align: center;
+		.txt-number span {
+			font-size: 20px;
+			border: 1px solid #000;
+			padding: 10px 17px;
+			border-radius: 50%;
+		}
+		h4 {
+			padding: 20px 0;
+		}
+	}
+} //End #features
+
+// CTA
+#cta {
+	padding-top: 180px;
+	padding-bottom: 90px;
+	background: #fff;
+	img {
+		border: 20px solid $secondary-color;
+		border-radius: 50%;
+		margin-right: -50px;
+		margin-top: -100px;
+	}
+	.cta-text {
+		background: $main-color;
+		color: #fff;
+		padding: 40px 50px;
+		p {
+			font-weight: 300;
+			padding-top: 15px;
+			padding-bottom: 20px;
+		}
+	}
+} //End #cta
+
+// Footer
+.mainfooter {
+	text-align: center;
+	padding: 30px;
+	background: #fff;
+	.logo {
+		color: $main-color;
+	}
+	.social-fixed {
+		margin-top: 20px;
+		a {
+			margin: 10px;
+		}
+	}
+}
+
+@import 'mobile';
